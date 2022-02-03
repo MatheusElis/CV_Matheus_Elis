@@ -1,0 +1,209 @@
+---
+name: Matheus Elis
+position: "Cientista de Dados"
+address: |
+         | São José dos Campos, São Paulo
+profilepic: perfil_elis.jpeg
+phone: 24 99859 5455
+email: "matheuselis@id.uff.br"
+github: MatheusElis
+linkedin: matheuselisdasilva
+aboutme: "Físico Computacional e atual aluno de mestrado em Computação Aplicada no Instituto Nacional de Pesquisas Espaciais (INPE). Atualmente atuo como Desenvolvedor Python e possuo habilidades de resolução de problemas voltados a modelagem e estatística e experiência acadêmica e profissional com trabalho individuais e em equipe."
+headcolor: 009ACD
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+always_allow_html: yes
+header-includes:
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(ggplot2)
+library(dplyr)
+library(sf)
+library(rnaturalearth)
+library(sfnetworks)
+library(ggrepel)
+library(emojifont)
+library(fontawesome)
+library(kableExtra)
+library(huxtable)
+library(gridExtra)
+```
+
+```{r}
+# \paragraphstyle{I am an environmental engineer from Cuenca, Ecuador specialized in Geospatial Technologies, expected by March 2019. My research scope includes spatial data analysis, particularly focused on R programming; remote sensing and earth observation data analysis, specially optical satellite imagery applied to environmental studies and analyses such as air pollution, land use/land cover change; geostatistical analysis of climate data; and ecological modelling. I feel very keen to pursue a career in research, science, and academia.}
+```
+
+<!-- | Nationality: Ecuadorian, Birthdate: 05/01/1994 -->
+
+\faIcon{university} Formação Acadêmica
+==================================
+
+```{r education}
+tribble( 
+  ~ study, ~ university, ~ loc, ~ dates, ~ details,
+  "Física com ênfase em física computacional", "Universidade Federal Fluminense", "Volta Redonda, Rio de Janeiro", "2015-2021", "Monitor Bolsista no Projeto Sensebiliza (2017-2021)",
+  "Física com ênfase em física computacional", "Universidade Federal Fluminense", "Volta Redonda, Rio de Janeiro", "2015-2021", "Monografia intitulada 'Estudo da Dinâmica da Hanseníase no Norte do Brasil Via Modelagem Baseada em Agentes'", 
+  "Mestrado em Matemática Computacional", "Instituto Nacional de Pesquisas Espaciais (INPE)", "São José dos Campos", "2021-Atual", "Disciplinas: Programação de Sistemas Massivamente Paralelos, Tópicos em Observação da Terra, Modelagem e Simulação do Sistema Terrestre, Redes Complexas Dinâmica e Aplicações, Tópicos Avançados em Modelagem Ambiental"
+) |> 
+  detailed_entries(study, dates, university, loc, details, .protect=FALSE)
+```
+
+\faIcon{briefcase} Experiência Profissional
+============================================
+
+```{r experience, eval = T}
+tribble( 
+  ~ study, ~ university, ~ loc, ~ dates, ~ details,
+  "Desenvolvedor Python Pleno", "TrackCash", "Remoto", "07/2021-Atual", "Atuar como desenvolvedor backend no desenvolvimento de sistemas para automação de processos, comunicação com apis e leitura de dados em arquivos."
+) |> 
+  detailed_entries(study, dates, university, loc, details, .protect=FALSE)
+```
+
+<!--
+\faIcon{lightbulb} Projects
+=====================================
+
+\smallskip
+
+\faIcon{satellite} Research projects
+---------------------------------
+<!-- \par\noindent\nobreak\vspace{-30pt}\rule{\textwidth}{1pt} -->
+
+<!--
+```{r proj}
+tribble(
+  ~ name, ~ acronym, ~ date, ~study_area,
+  "Smarter Targeting of Erosion Control", "STEC", "2018 - 2023", "NZ", 
+  "The impact of mass movements on alpine trails and huts assessed by EO data", "MontEO \\href{http://monteo.zgis.at/}{\\tiny{\\faIcon{link}}}", "2020 - 2021", "AT", 
+  "Detection and Analysis of Landslide-induced River Course Changes and Lake Formation", "RiCoLa \\href{http://landslides-and-rivers.sbg.ac.at/}{\\tiny{\\faIcon{link}}}", "2017 - 2020", "AT, NZ, TW", 
+  "Observation and Reporting of Landscape Dynamics by Citizens", "citizenMorph \\href{http://citizenmorph.sbg.ac.at/}{\\tiny{\\faIcon{link}}}", "2018 - 2020", "AT, DE, IS", 
+  "Mapping, Monitoring and Modelling the Spatio-Temporal Dynamics of Land Surface Morphology", "MORPH \\href{http://morph.sbg.ac.at/}{\\tiny{\\faIcon{link}}}", "2016 - 2020", "IS"
+) |> 
+  detailed_entries(with = acronym, what = name, when = date, where = study_area, .protect=FALSE)  
+```
+
+\smallskip
+
+\faIcon{laptop-code} Programming projects
+----------------------------------
+<!-- \par\noindent\nobreak\vspace{-30pt}\rule{\textwidth}{1pt} -->
+
+<!--
+```{r dev}
+tribble(
+  ~ name, ~ acronym, ~ type,
+  "Landslide dammed-lakes detection and monitoring after the Kaikōura earthquake in New Zealand", "Kaikoura landslide dammed-lakes \\href{https://github.com/loreabad6/KaikouraDammedLakes_public}{\\tiny{\\faIcon{link}}}", "GEE project",
+  "Tidy Geospatial Networks in R", "sfnetworks \\href{https://luukvdmeer.github.io/sfnetworks/}{\\tiny{\\faIcon{link}}}", "R Package",
+  "Bicycle Network Analysis Score for UK and NL",
+  "BNA-EU \\href{https://github.com/loreabad6/masters-thesis-geotech}{\\tiny{\\faIcon{link}}}", "RMarkdown Reporting"
+) |> 
+  detailed_entries(with = acronym, what = name, where = type, .protect=FALSE)  
+```
+-->
+
+
+\faIcon{laptop-code} Cursos
+================================
+
+
+```{r presentations}
+tribble( 
+  ~ study, ~ university, ~ loc, ~dates, ~ details,
+  "Programação", "Alura", "62h", "2021", "Python 3 parte 1: Introdução à nova versão da linguagem (de 22/07/2021 a 26/07/2021) 12h",
+  "Programação", "Alura", "62h", "2021" , "Python 3 parte 2: Avançando na linguagem (de 15/10/2021 a 15/10/2021) 12h",
+  "Programação", "Alura", "62h", "2021" , "Python 3: Introdução a Orientação a objetos (de 26/07/2021 a 25/11/2021) 12h",
+  "Programação", "Alura", "62h", "2021" , "Jogos clássicos parte 1: Iniciando no Javascript com Pong (de 23/07/2021 a 27/07/2021) 6h",
+  "Programação", "Alura", "62h", "2021" , "Jogos clássicos parte 2: laços e listas com Javascript (de 27/07/2021 a 28/07/2021) 4h",
+  "Programação", "Alura", "62h", "2021" , "Introdução ao Django: Modelo, Rotas e Views (de 09/09/2021 a 13/09/2021) 8h",
+  "Programação", "Alura", "62h", "2021" , "Arquitetura de computadores: Por trás de como seu programa funciona (de 28/07/2021 a 01/08/2021) 8h",
+  "Front-end", "Alura", "24h", "2021" , "HTTP: Entendendo a web por baixo dos panos (de 12/08/2021 a 16/08/2021) 14h",
+  "Front-end", "Alura", "24h", "2021" , "JavaScript: Programando a Orientação a Objetos (de 17/11/2021 a 17/11/2021) 10h",
+  "DevOps", "Alura", "12h", "2021" , "Linux I: Conhecendo e utilizando o terminal (de 01/08/2021 a 01/08/2021) 4h",
+  "DevOps", "Alura", "12h", "2021" , "Linux II: Programas, processos e pacotes (de 15/10/2021 a 15/10/2021) 8h",
+  "Data Science", "Alura", "14h", "2021" , "Machine Learning: Introdução a classificação com SKLearn (de 27/08/2021 a 14/09/2021) 8h",
+  "Data Science", "Alura", "14h", "2021" , "Python Scikit-Learn: Regressão, classificação e clustering (de 14/09/2021 a 14/09/2021) 6h",
+  "Programação", "Udemy", "19.5h", "2021" , "Curso de programação em Julia (Fev/2021) 12.5h",
+  "Programação", "Udemy", "19.5h", "2021" , "Linguagem R (Fev/2021) 7h",
+  "Programação", "Escola de Inverno Supercomputador SDUMONT - LNCC", "32h", "2018", "R em ambiente HPC (Ago/2018) 4h",
+  "Programação", "Escola de Inverno Supercomputador SDUMONT - LNCC", "32h", "2018", "Introdução a Programação Paralela/OpenMP (Ago/2018) 4h",
+  "Programação", "Escola de Inverno Supercomputador SDUMONT - LNCC", "32h", "2018", "Introdução ao uso de containers em Computação de Alto desempenho (Ago/2018) 4h",
+  "Programação", "Escola de Inverno Supercomputador SDUMONT - LNCC", "32h", "2018", "Fortram para Programação Paralela (Ago/2018) 8h",
+  "Programação", "Escola de Inverno Supercomputador SDUMONT - LNCC", "32h", "2018", "C para Programação Paralela (Ago/2018) 8h",
+  "Programação", "WorCAP 2020 - INPE", "6h", "2018", "Data Science e Machine Learning (Set/2020) 6h",
+) |> 
+  detailed_entries(study, dates, university, loc, details, .protect=FALSE)
+```
+
+\faIcon{brain} Habilidades
+================================
+
+\smallskip
+
+\faIcon{cogs} Habilidades Técnicas
+---------------------------------
+<!-- \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} -->
+
+<!-- \par\noindent\nobreak\vspace{-30pt}\rule{\textwidth}{1pt} -->
+
+```{r techtable, results='markup'}
+tribble(
+   ~`Coding Languages`, ~Software, ~Other,
+  "C -- C++ -- R -- Python -- Julia -- Lua -- SQL",
+  "RStudio -- SAGA -- PostgreSQL -- Mendeley",
+  "Git -- Markdown -- LaTex"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#009acd") |> 
+  row_spec(1, bold = F, color = "#7f7f7f") |> 
+  column_spec(column = 1:3, width = '4.75cm')
+```
+
+<!-- \smallskip -->
+
+<!--
+\faIcon{calendar} Organizational skills
+------------------------------
+```{r events}
+tribble(
+  ~ event, ~ date, ~ place,
+  "e-Rum 2020 satellite event: \\textit{sfnetworks} Webinar and Hackathon \\href{https://2020.erum.io/program/hackathon/}{\\tiny{\\faIcon{link}}}", "06, 2020", "Online Event",
+  "citizenMorph App Testing Workshop", "09, 2019", "Höfn, IS",
+  "GeoMundus 2018 \\href{http://www.geomundus.org/2018/}{\\tiny{\\faIcon{link}}}", "12, 2018", "Lisbon, PT",
+  # "I University Simposium of Environmental Science Research", "06, 2016", "Cuenca, EC",
+  "Vicepresident of the Student Association of Environmental Engineers", "2013 - 2014", "Cuenca, EC",
+) |> 
+  brief_entries(what = event, when = date, with = place, .protect = F)
+```
+  -->
+  
+\bigskip
+
+\faIcon{language} Idiomas
+-------------------------------
+
+```{r langforeign, results='markup'}
+data.frame(
+  Skill = c("Leitura", "Escrita", "Escuta","Fala"),
+  Inglês = cell_spec(c("Avançado","Básico","Avançado","Básico"), 'latex', color = '#009acd'), 
+  Português = cell_spec(c(rep("Nativo", 4)), 'latex', color = '#4cb8dc')
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |>
+  column_spec(column = 1:6, width = '2.4cm') #|> 
+  # add_header_above(' ', line = F) |>
+  # row_spec(0:4, extra_latex_after = "\\arrayrulecolor{white}") 
+```
