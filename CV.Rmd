@@ -160,10 +160,10 @@ tribble(
 
 ```{r techtable, results='markup'}
 tribble(
-   ~`Coding Languages`, ~Software, ~Other,
-  "C -- C++ -- R -- Python -- Julia -- Lua -- SQL",
-  "RStudio -- SAGA -- PostgreSQL -- Mendeley",
-  "Git -- Markdown -- LaTex"
+   ~`Coding Languages`, ~Frameworks, ~Other, 
+  "Python -- C -- C++ -- R -- Julia -- Lua -- SQL",
+  "Machine Learning -- AWS -- OpenMP -- MPI -- WebScraping -- RestAPI -- Django -- Flask",
+  "Git -- GitFlow -- Markdown -- LaTex -- PowerBIyes"
 ) |>
   kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
   kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
