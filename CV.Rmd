@@ -1,6 +1,6 @@
 ---
 name: Matheus Elis
-position: "Cientista de Dados"
+position: "Desenvolvedor | Cientista de Dados"
 address: |
          | São José dos Campos, São Paulo
 profilepic: perfil_elis.jpeg
